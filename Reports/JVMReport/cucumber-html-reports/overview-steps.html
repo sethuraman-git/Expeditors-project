@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Expeditors application</td>
+            <td>20 Jun 2021, 10:26</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+          <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+      </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+                      <tr>
+              <td class="location">ExpeditorsStepDefinition.user_have_to_click_the_login_button()</td>
+              <td>4</td>
+              <td class="duration" data-value="3205947275">3.205</td>
+              <td class="duration" data-value="3205947275">3.594</td>
+              <td class="duration" data-value="12823789100">12.823</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ExpeditorsStepDefinition.user_have_to_enter_into_the_Expeditors_login_page()</td>
+              <td>4</td>
+              <td class="duration" data-value="6699972025">6.699</td>
+              <td class="duration" data-value="6699972025">7.602</td>
+              <td class="duration" data-value="26799888100">26.799</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ExpeditorsStepDefinition.user_have_to_pass_invalid_password_in_the_field()</td>
+              <td>3</td>
+              <td class="duration" data-value="129044000">0.129</td>
+              <td class="duration" data-value="129044000">0.141</td>
+              <td class="duration" data-value="387132000">0.387</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ExpeditorsStepDefinition.user_have_to_pass_invalid_username_in_the_field()</td>
+              <td>2</td>
+              <td class="duration" data-value="762790700">0.762</td>
+              <td class="duration" data-value="762790700">1.361</td>
+              <td class="duration" data-value="1525581400">1.525</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ExpeditorsStepDefinition.user_have_to_pass_username_without()</td>
+              <td>1</td>
+              <td class="duration" data-value="175571000">0.175</td>
+              <td class="duration" data-value="175571000">0.175</td>
+              <td class="duration" data-value="175571000">0.175</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ExpeditorsStepDefinition.user_have_to_pass_username_without_com_at_the_end()</td>
+              <td>1</td>
+              <td class="duration" data-value="963863600">0.963</td>
+              <td class="duration" data-value="963863600">0.963</td>
+              <td class="duration" data-value="963863600">0.963</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ExpeditorsStepDefinition.user_have_to_pass_valid_password_in_the_field()</td>
+              <td>1</td>
+              <td class="duration" data-value="151300600">0.151</td>
+              <td class="duration" data-value="151300600">0.151</td>
+              <td class="duration" data-value="151300600">0.151</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ExpeditorsStepDefinition.user_should_be_getting_alert_message()</td>
+              <td>2</td>
+              <td class="duration" data-value="146050">0.000</td>
+              <td class="duration" data-value="146050">0.000</td>
+              <td class="duration" data-value="292100">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ExpeditorsStepDefinition.user_should_be_getting_the_alert()</td>
+              <td>2</td>
+              <td class="duration" data-value="141900">0.000</td>
+              <td class="duration" data-value="141900">0.000</td>
+              <td class="duration" data-value="283800">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ExpeditorsStepDefinitonClass2.user_have_to_click_login_button()</td>
+              <td>4</td>
+              <td class="duration" data-value="3102621600">3.102</td>
+              <td class="duration" data-value="3102621600">3.190</td>
+              <td class="duration" data-value="12410486400">12.410</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ExpeditorsStepDefinitonClass2.user_have_to_enter_into_Expeditors_login_page()</td>
+              <td>4</td>
+              <td class="duration" data-value="5881709725">5.881</td>
+              <td class="duration" data-value="5881709725">6.201</td>
+              <td class="duration" data-value="23526838900">23.526</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ExpeditorsStepDefinitonClass2.user_have_to_pass_invalid_password()</td>
+              <td>1</td>
+              <td class="duration" data-value="649947200">0.649</td>
+              <td class="duration" data-value="649947200">0.649</td>
+              <td class="duration" data-value="649947200">0.649</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ExpeditorsStepDefinitonClass2.user_have_to_pass_invalid_username()</td>
+              <td>1</td>
+              <td class="duration" data-value="283228500">0.283</td>
+              <td class="duration" data-value="283228500">0.283</td>
+              <td class="duration" data-value="283228500">0.283</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ExpeditorsStepDefinitonClass2.user_have_to_pass_valid_password()</td>
+              <td>1</td>
+              <td class="duration" data-value="326042200">0.326</td>
+              <td class="duration" data-value="326042200">0.326</td>
+              <td class="duration" data-value="326042200">0.326</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ExpeditorsStepDefinitonClass2.user_should_be_getting_alert()</td>
+              <td>4</td>
+              <td class="duration" data-value="168525">0.000</td>
+              <td class="duration" data-value="168525">0.000</td>
+              <td class="duration" data-value="674100">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Hooks.end()</td>
+              <td>8</td>
+              <td class="duration" data-value="1237498950">1.237</td>
+              <td class="duration" data-value="1237498950">1.824</td>
+              <td class="duration" data-value="9899991600">9.899</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Hooks.start()</td>
+              <td>8</td>
+              <td class="duration" data-value="2517709875">2.517</td>
+              <td class="duration" data-value="2517709875">3.759</td>
+              <td class="duration" data-value="20141679000">20.141</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                  </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>17</td>
+            <td>51</td>
+            <td class="duration">2.158</td>
+            <td class="duration">26.799</td>
+            <td class="duration">1:50.066</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
